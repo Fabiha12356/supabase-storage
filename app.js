@@ -6,6 +6,20 @@ const { createClient } = supabase;
 const client = createClient(supabaseUrl, supabaseKey);
 
 let subBtn = document.querySelector("#btn");
-subBtn.addEventListener("click",()=>{
+let img = document.querySelector("#pic");
+
+subBtn.addEventListener("click", async()=>{
     console.log("okkkkkkkkk");
+    console.log(img.files[0])
+    //supabase
+    const avatarFile = img.files[0]
+const { data, error } = await client
+  .storage
+  .from('images')
+  .upload('public/avatar1.png', avatarFile, {
+    cacheControl: '3600',
+    upsert: true
+  })
+  console.log(data);
+  console.log(error)
 })
