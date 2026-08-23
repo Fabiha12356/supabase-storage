@@ -16,10 +16,10 @@ subBtn.addEventListener("click", async()=>{
 const { data, error } = await client
   .storage
   .from('images')
-  .upload('public/avatar1.png', avatarFile, {
+  .upload(avatarFile.name, avatarFile, {
     cacheControl: '3600',
-    upsert: true
-  })
+    upsert: false
+    })
   console.log(data);
   console.log(error)
 })
