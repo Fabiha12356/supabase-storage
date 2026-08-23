@@ -16,10 +16,17 @@ subBtn.addEventListener("click", async()=>{
 const { data, error } = await client
   .storage
   .from('images')
-  .upload(avatarFile.name, avatarFile, {
+  .upload("image1", avatarFile, {
     cacheControl: '3600',
-    upsert: false
+    upsert: true
     })
   console.log(data);
   console.log(error)
+  //getpublisurl:-
+  const { data:userdata } = client
+  .storage
+  .from('images')
+  .getPublicUrl('avatarFile')
+  console.log(userdata);
+  console.log(userdata.publicUrl)
 })
