@@ -10,7 +10,7 @@ let img = document.querySelector("#pic");
 let uiImage = document.querySelector("#Image");
 console.log(uiImage);
 
-subBtn.addEventListener("click", async()=>{
+subBtn && subBtn.addEventListener("click", async()=>{
     console.log("okkkkkkkkk");
     console.log(img.files[0])
 //insert:-
@@ -57,4 +57,5 @@ let register = document.querySelector("#register");
 
 register.addEventListener("click",()=>{
   console.log("okkk!");
+  window.location.href = "./profile.html"
 })
