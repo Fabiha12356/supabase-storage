@@ -16,17 +16,31 @@ subBtn.addEventListener("click", async()=>{
 const { data, error } = await client
   .storage
   .from('images')
-  .upload("image1", avatarFile, {
-    cacheControl: '3600',
+  .upload("image4", avatarFile, {
+    cacheControl: '0',
     upsert: true
     })
   console.log(data);
   console.log(error)
-  //getpublisurl:-
-  const { data:userdata } = client
+
+
+  const { data:userdata, error:usererror } = await client
   .storage
   .from('images')
-  .getPublicUrl('avatarFile')
-  console.log(userdata);
-  console.log(userdata.publicUrl)
+  .update("image4", avatarFile, {
+    cacheControl: '0'
+  });
+
+console.log(userdata);
+console.log(usererror);
+
+
+  //getpublisurl:-
+  // const { data:userdata } = client
+  // .storage
+  // .from('images')
+  // .getPublicUrl(data.path)
+  // console.log(userdata.publicUrl);
+  // console.log(userdata.path)
+  // console.log("https://wmflitippmldqpfvxixt.supabase.co/storage/v1/object/public/images/lightbulb.png")
 })
