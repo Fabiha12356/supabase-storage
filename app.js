@@ -6,15 +6,18 @@ const { createClient } = supabase;
 const client = createClient(supabaseUrl, supabaseKey);
 
 let subBtn = document.querySelector("#btn");
-let img = document.querySelector("#pic");
-let uiImage = document.querySelector("#Image");
-console.log(uiImage);
+let input = document.querySelector("#pic");
+// console.log(subBtn);
+// console.log(input);
 
-subBtn && subBtn.addEventListener("click", async()=>{
+
+
+subBtn && subBtn.addEventListener("click", async(e)=>{
+  e.preventDefault();
     console.log("okkkkkkkkk");
-    console.log(img.files[0])
+    console.log(input.files[0])
 //insert:-
-    const avatarFile = img.files[0]
+    const avatarFile = input.files[0]
 const { data, error } = await client
   .storage
   .from('images')
@@ -23,7 +26,7 @@ const { data, error } = await client
     upsert: true
     })
   console.log(data);
-  console.log(error)
+  console.log(error);
 
 //Update:-
   const { data:userdata, error:usererror } = await client
@@ -36,6 +39,9 @@ const { data, error } = await client
 console.log(userdata);
 console.log(usererror);
 
+// window.location.href = "./profile.html"
+   let uiImage = document.querySelector("#Image");
+
 
   // Get:-
   const { data:userUrl } = client
@@ -46,6 +52,7 @@ console.log(usererror);
 let URL = userUrl.publicUrl
 
 
+
 uiImage.src =`${URL}?t=${Date.now()}`
  
 console.log(uiImage);
@@ -53,9 +60,9 @@ console.log(uiImage.src);
 })
 
 
-let register = document.querySelector("#register");
+// let register = document.querySelector("#register");
 
-register.addEventListener("click",()=>{
-  console.log("okkk!");
-  window.location.href = "./profile.html"
-})
+// register.addEventListener("click",()=>{
+//   console.log("okkk!");
+  // window.location.href = "./profile.html"
+// })
