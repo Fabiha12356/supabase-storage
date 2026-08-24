@@ -7,11 +7,13 @@ const client = createClient(supabaseUrl, supabaseKey);
 
 let subBtn = document.querySelector("#btn");
 let img = document.querySelector("#pic");
+let uiImage = document.querySelector("#Image");
+console.log(uiImage);
 
 subBtn.addEventListener("click", async()=>{
     console.log("okkkkkkkkk");
     console.log(img.files[0])
-    //supabase
+//insert:-
     const avatarFile = img.files[0]
 const { data, error } = await client
   .storage
@@ -23,7 +25,7 @@ const { data, error } = await client
   console.log(data);
   console.log(error)
 
-
+//Update:-
   const { data:userdata, error:usererror } = await client
   .storage
   .from('images')
@@ -35,12 +37,20 @@ console.log(userdata);
 console.log(usererror);
 
 
-  //getpublisurl:-
-  // const { data:userdata } = client
-  // .storage
-  // .from('images')
-  // .getPublicUrl(data.path)
-  // console.log(userdata.publicUrl);
-  // console.log(userdata.path)
-  // console.log("https://wmflitippmldqpfvxixt.supabase.co/storage/v1/object/public/images/lightbulb.png")
+  // Get:-
+  const { data:userUrl } = client
+  .storage
+  .from('images')
+  .getPublicUrl(data.path)
+  console.log(userUrl.publicUrl);
+let URL = userUrl.publicUrl
+
+
+uiImage.src =`${URL}?t=${Date.now()}`
+ 
+console.log(uiImage);
+console.log(uiImage.src);
+
+
+
 })
