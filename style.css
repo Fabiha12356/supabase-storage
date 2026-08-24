@@ -1,0 +1,80 @@
+/* .profile-box {
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+}
+
+.profile-img {
+    width: clamp(80px, 12vw, 110px);
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    background-color: #063f40;
+    border: 1px solid #195b5c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.profile-img i {
+    font-size: clamp(38px, 6vw, 55px);
+    color: #42c6bb;
+}
+
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    margin-top: -2px;
+    padding: clamp(5px, 1vw, 7px) clamp(12px, 2vw, 17px);
+
+    border: 1px solid #333;
+    border-radius: 25px;
+
+    background-color: #181818;
+    color: #00d084;
+
+    font-size: clamp(12px, 1.5vw, 14px);
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.edit-btn i {
+    font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.edit-btn:hover {
+    background-color: #222;
+}
+
+#profile-file {
+    display: none; */
+/* } */
+
+
+.gradient-custom-3 {
+/* fallback for old browsers */
+background: #84fab0;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+.gradient-custom-4 {
+/* fallback for old browsers */
+background: #84fab0;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}

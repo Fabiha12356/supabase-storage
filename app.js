@@ -50,7 +50,11 @@ uiImage.src =`${URL}?t=${Date.now()}`
  
 console.log(uiImage);
 console.log(uiImage.src);
+})
 
 
+let register = document.querySelector("#register");
 
+register.addEventListener("click",()=>{
+  console.log("okkk!");
 })
