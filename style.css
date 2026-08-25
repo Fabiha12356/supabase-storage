@@ -62,4 +62,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+    height: 20vh;
+    border: 1px solid palevioletred
+}
+.img-div{
+    border: 1px solid brown;
+    width: 10%;
+    height: 18vh;
+}
+.img-div img{
+    /* border:  4px solid pink; */
+width: 100%;
+height: 18vh;
 
+}
