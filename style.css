@@ -62,24 +62,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    height: 20vh;
-    border: 1px solid palevioletred;
-     padding: 15px 12px ;
-    background: #ffffff !important;
-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-
-    
+#img-parent{
+    border: 1px solid black;
+    display: flex !important;
+    justify-content: end;
 }
 .img-div{
     border: 1px solid brown;
-    width: 10%;
-    height: 18vh;
+    /* width: 10%;
+    height: 18vh; */
 }
 .img-div img{
-    /* border:  4px solid pink; */
-width: 100%;
-height: 18vh;
+    border:  4px solid pink;
+/* width: 100%;
+height: 18vh; */
 
 }
 #form-valid{
