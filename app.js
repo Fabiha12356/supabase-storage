@@ -7,8 +7,10 @@ const client = createClient(supabaseUrl, supabaseKey);
 
 let subBtn = document.querySelector("#btn");
 let input = document.querySelector("#pic");
-// console.log(subBtn);
-// console.log(input);
+   let uiImage = document.querySelector("#Image");
+console.log(subBtn);
+console.log(input);
+console.log(uiImage);
 
 
 
@@ -39,8 +41,8 @@ const { data, error } = await client
 console.log(userdata);
 console.log(usererror);
 
-// window.location.href = "./profile.html"
-   let uiImage = document.querySelector("#Image");
+
+
 
 
   // Get:-
@@ -60,9 +62,3 @@ console.log(uiImage.src);
 })
 
 
-// let register = document.querySelector("#register");
-
-// register.addEventListener("click",()=>{
-//   console.log("okkk!");
-  // window.location.href = "./profile.html"
-// })
