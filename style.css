@@ -76,13 +76,14 @@ body{
 #img-parent{
     /* border: 1px solid black; */
     display: flex !important;
+    /* flex-direction: column; */
     justify-content: end;
 }
 
 .img-div{
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
     width: 10%;
-    height: 20vh;
+    height: 25vh;
       background: #ffffff !important;
 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 border-radius: 5px !important;
@@ -92,7 +93,20 @@ border-radius: 5px !important;
     /* border:  4px solid pink; */
 width: 100%;
 height: 20vh;
-
+}
+.edit-btn {
+padding: 8px 15px ;
+background: #ffffff !important;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid #333;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: black;
+    margin-left: 18%;
+    cursor: pointer;
+}
+.edit-btn i {
+    font-size: clamp(12px, 1.5vw, 14px);
 }
 #form-valid{
     /* border: 1px solid black; */
