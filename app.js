@@ -7,17 +7,18 @@ const client = createClient(supabaseUrl, supabaseKey);
 
 let subBtn = document.querySelector("#btn");
 let input = document.querySelector("#pic");
-   let uiImage = document.querySelector("#Image");
+ let div = document.querySelector("#profile");
 console.log(subBtn);
 console.log(input);
-console.log(uiImage);
-
- let div = document.querySelector("#profile");
  console.log(div)
 
+
+
+ //chnge text of div :-
 div.innerHTML = `<img src="./images/profile1.jpg" alt="">`
 console.log(div)
 console.log(div.innerHTML)
+
 
 
 subBtn && subBtn.addEventListener("click", async(e)=>{
@@ -61,10 +62,10 @@ let URL = userUrl.publicUrl
 
 
 
-uiImage.src =`${URL}?t=${Date.now()}`
+div.innerHTML=`<img src="${URL}?t=${Date.now()}" alt="pic">`
  
-console.log(uiImage);
-console.log(uiImage.src);
+console.log(div);
+
 })
 
 

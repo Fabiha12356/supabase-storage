@@ -6,9 +6,9 @@
 }
 
 .profile-img {
-    /* width: clamp(80px, 12vw, 110px);
-    aspect-ratio: 1 / 1; */
-
+    width: clamp(80px, 12vw, 110px);
+    aspect-ratio: 1 / 1;
+border: 2px solid white;
     border-radius: 50%;
     /* background-color: #063f40;
     border: 1px solid #195b5c; */
