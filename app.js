@@ -12,6 +12,12 @@ console.log(subBtn);
 console.log(input);
 console.log(uiImage);
 
+ let div = document.querySelector("#profile");
+ console.log(div)
+
+div.innerHTML = `<img src="./images/profile1.jpg" alt="">`
+console.log(div)
+console.log(div.innerHTML)
 
 
 subBtn && subBtn.addEventListener("click", async(e)=>{

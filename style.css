@@ -1,4 +1,4 @@
-/* .profile-box {
+.profile-box {
     width: 100%;
     max-width: 150px;
     text-align: center;
@@ -20,8 +20,13 @@
 }
 
 .profile-img i {
-    font-size: clamp(38px, 6vw, 55px);
-    color: #42c6bb;
+    width: 100%;
+         color: #ffffff !important;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.profile-img img{
+    width: 90%;
+    border-radius: 50%;
 }
 
 .edit-btn {
@@ -29,20 +34,19 @@
     align-items: center;
     justify-content: center;
     gap: 7px;
-
     margin-top: -2px;
-    padding: clamp(5px, 1vw, 7px) clamp(12px, 2vw, 17px);
+    /* padding: clamp(5px, 1vw, 7px) clamp(12px, 2vw, 17px); */
 
     border: 1px solid #333;
     border-radius: 25px;
 
     background-color: #181818;
-    color: #00d084;
+    /* color: #00d084; */
 
-    font-size: clamp(12px, 1.5vw, 14px);
+    /* font-size: clamp(12px, 1.5vw, 14px); */
 
     cursor: pointer;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .edit-btn i {
@@ -55,7 +59,9 @@
 
 #profile-file {
     display: none;
-} */
+}
+
+
 
 *{
     margin: 0;
