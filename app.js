@@ -8,22 +8,20 @@ const client = createClient(supabaseUrl, supabaseKey);
 let subBtn = document.querySelector("#btn");
 let input = document.querySelector("#pic");
  let div = document.querySelector("#profile");
-console.log(subBtn);
-console.log(input);
- console.log(div)
+
 
 
 
  //chnge text of div :-
 div.innerHTML = `<img src="./images/profile1.jpg" alt="">`
 console.log(div)
-console.log(div.innerHTML)
 
 
+
+//Insert:-
 
 subBtn && subBtn.addEventListener("click", async(e)=>{
   e.preventDefault();
-    console.log("okkkkkkkkk");
     console.log(input.files[0])
 //insert:-
     const avatarFile = input.files[0]
@@ -58,11 +56,10 @@ console.log(div);
 
 
 
+//Replace:-
 
-// let input2 = document.querySelector("#icon");
 
   let update = document.querySelector("#profile-file");
-console.log(update);
 
 
 update.addEventListener("change", async()=>{
@@ -100,12 +97,5 @@ let URL = data.publicUrl
 div.innerHTML=`<img src="${URL}?t=${Date.now()}" alt="pic">`
  
 console.log(div);
-
-
-
-
-
-
-
 
 });
