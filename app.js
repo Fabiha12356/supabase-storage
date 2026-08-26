@@ -30,24 +30,12 @@ subBtn && subBtn.addEventListener("click", async(e)=>{
 const { data, error } = await client
   .storage
   .from('images')
-  .upload("image4", avatarFile, {
+  .upload(avatarFile.name, avatarFile, {
     cacheControl: '0',
     upsert: true
     })
   console.log(data);
   console.log(error);
-
-//Update:-
-  const { data:userdata, error:usererror } = await client
-  .storage
-  .from('images')
-  .update("image4", avatarFile, {
-    cacheControl: '0'
-  });
-
-console.log(userdata);
-console.log(usererror);
-
 
 
 
@@ -69,3 +57,55 @@ console.log(div);
 })
 
 
+
+
+// let input2 = document.querySelector("#icon");
+
+  let update = document.querySelector("#profile-file");
+console.log(update);
+
+
+update.addEventListener("change", async()=>{
+
+  console.log("file selected")
+
+  console.log(update.files[0]);
+
+
+
+//Update:-
+ const avatarFile1 = update.files[0]
+  const { data:userdata, error:usererror } = await client
+  .storage
+  .from('images')
+  .update("image4", avatarFile1, {
+    cacheControl: '0'
+  });
+
+console.log(userdata);
+console.log(usererror);
+
+
+
+ // Get:-
+  const { data } = client
+  .storage
+  .from('images')
+  .getPublicUrl("image4")
+  console.log(data.publicUrl);
+let URL = data.publicUrl
+
+
+
+div.innerHTML=`<img src="${URL}?t=${Date.now()}" alt="pic">`
+ 
+console.log(div);
+
+
+
+
+
+
+
+
+});
