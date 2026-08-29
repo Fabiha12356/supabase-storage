@@ -1,6 +1,9 @@
 const supabaseUrl = "https://wmflitippmldqpfvxixt.supabase.co";
 const supabaseKey = "sb_publishable_0VvRE72u8ZALMxvFXcuC5w_vAFO97BS";
 
+//miss tayyaba:0-
+// const supabaseUrl = "https://dqezttgellsfwnywvzlk.supabase.co";
+// const supabaseKey = "sb_publishable_KiTrnbhlxaTkgvRJgUl3Jg_IW9XRtCF";
 
 const { createClient } = supabase;
 const client = createClient(supabaseUrl, supabaseKey);
@@ -28,9 +31,9 @@ subBtn && subBtn.addEventListener("click", async(e)=>{
 const { data, error } = await client
   .storage
   .from('images')
-  .upload(avatarFile.name, avatarFile, {
+  .upload("image10", avatarFile, {
     cacheControl: '0',
-    upsert: true
+    upsert: false
     })
   console.log(data);
   console.log(error);
@@ -75,7 +78,7 @@ update.addEventListener("change", async()=>{
   const { data:userdata, error:usererror } = await client
   .storage
   .from('images')
-  .update("image4", avatarFile1, {
+  .update("image10", avatarFile1, {
     cacheControl: '0'
   });
 
@@ -88,14 +91,12 @@ console.log(usererror);
   const { data } = client
   .storage
   .from('images')
-  .getPublicUrl("image4")
+  .getPublicUrl("image10")
   console.log(data.publicUrl);
 let URL = data.publicUrl
 
 
 
 div.innerHTML=`<img src="${URL}?t=${Date.now()}" alt="pic">`
- 
 console.log(div);
-
 });
